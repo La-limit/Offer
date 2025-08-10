@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض سعر</title>
+    <!-- تضمين Tailwind CSS لسهولة التصميم -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0b172a; /* خلفية زرقاء داكنة جداً */
+            color: #d1d5db; /* لون نص رمادي فاتح للتباين */
+        }
+        /* إخفاء زر الطباعة عند الطباعة */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: #fff;
+                color: #000;
+            }
+            .max-w-4xl {
+                max-width: 100%;
+                box-shadow: none;
+                border: none;
+            }
+            header, footer, main section {
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+            h1, h2, h3, p {
+                color: #000 !important;
+            }
+            .border-b-2, .border {
+                border-color: #333 !important;
+            }
+            .text-yellow-400 {
+                color: #000 !important;
+            }
+            .text-green-400 {
+                 color: green !important;
+            }
+        }
+        /* تأثيرات hover للبطاقات */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .la-limit-dots {
+            color: #fde047; /* لون أصفر فاتح للتمييز */
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- الحاوية الرئيسية للعرض -->
+    <div class="max-w-4xl mx-auto bg-[#132d4b] rounded-3xl shadow-2xl overflow-hidden">
+        
+        <!-- رأس العرض مع اسم الشركة والعنوان -->
+        <header class="bg-[#1a385f] text-center p-8 md:p-12 border-b-4 border-yellow-400">
+            <!-- اسم الشركة: تم استبدال الشعار بكلمة la limit باللون الأبيض -->
+            <p class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+                la limit
+            </p>
+            
+            <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-400 mb-2">عرض سعر</h1>
+            <p class="text-xl md:text-2xl text-white">مدرسة بناة الأجيال</p>
+        </header>
+
+        <!-- المحتوى الرئيسي للعرض -->
+        <main class="p-6 md:p-10 space-y-8">
+
+            <!-- قسم الخطة التسويقية الشهرية -->
+            <section class="bg-[#1a385f] p-6 rounded-2xl shadow-xl border border-[#23456e] transition-transform duration-300 card-hover">
+                <h2 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 border-b pb-2 border-yellow-400">خطة تسويقية شهرية</h2>
+                <ul class="list-disc list-inside space-y-2 text-base md:text-lg">
+                    <li>دراسة منافسين</li>
+                    <li>دراسة سوق</li>
+                    <li>تحليل ميزات وسلبيات</li>
+                    <li>وضع استراتيجيات تسويقية</li>
+                    <li>إنشاء حملات تسويقية مبتكرة لتحقيق الأهداف المطلوبة</li>
+                    <li>وضع خطة للمحتوى (Social Media)</li>
+                </ul>
+            </section>
+            
+            <!-- قسم الخدمات الأساسية -->
+            <section class="bg-[#1a385f] p-6 rounded-2xl shadow-xl border border-[#23456e] transition-transform duration-300 card-hover">
+                <h2 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 border-b pb-2 border-yellow-400">خدمات التسويق الأساسية</h2>
+                <ul class="list-disc list-inside space-y-2 text-base md:text-lg">
+                    <li>استلام صفحات التواصل الاجتماعي</li>
+                    <li>انشاء تصاميم بوسترات ، لتصاميم السوشال ميديا بالإضافة الى أي تصميم إضافي ( تصميم أقلام او دفاتر او اجندة او تصاميم على الملابس )</li>
+                    <li>تحليل البيانات وتقديم حلول واقتراحات بشكل دائم لمواكبة أي حدث</li>
+                    <li>تنفيذ الحملات التسويقية الموجودة في الخطة مثل ( انشاء شبكة الخريجين وتحليل وجمع البيانات ، إنشاء استبيانات وتحليلها لتطوير الخطط التسويقية بشكل دائم )</li>
+                    <li>اشراف وتنفيذ الخطط المتفق عليها</li>
+                </ul>
+                <div class="text-center mt-6 p-4 bg-[#23456e] rounded-xl font-bold text-lg md:text-xl">
+                    <p class="mb-2">التكلفة: <span class="text-yellow-400">200 $</span></p>
+                    <p class="text-green-400">خصم 25%</p>
+                    <p>المجموع: <span class="text-yellow-400">150 $</span></p>
+                </div>
+            </section>
+
+            <!-- قسم الفعاليات -->
+            <section class="bg-[#1a385f] p-6 rounded-2xl shadow-xl border border-[#23456e] transition-transform duration-300 card-hover">
+                <h2 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 border-b pb-2 border-yellow-400">الفعاليات</h2>
+                <div class="space-y-4 text-base md:text-lg">
+                    <p><strong>ايفنت 1:</strong> يوم مفتوح للطلاب من الصف الأول للصف الرابع يضم عدة فقرات منها فقرة التعريف بنشاطات المدرسة وفقرة عن الورشات الجديدة AI بالإضافة لفقرات ترفيهية بالتعاون مع شركات خارجية</p>
+                    <p><strong>ايفنت 2:</strong> يوم مفتوح للطلاب من الصف الخامس الى التاسع يضم عدة فقرات تهدف الى توضيح الية سير المدرسة بكيفية اهتمامها بهذه المرحلة المهمة وتضم فقرات تعريفية بالورشات الجديدة</p>
+                    <p><strong>ايفنت 3:</strong> يضم مشاركة مؤثرين وخريجين جامعات سبق ودرسو بالمدرسة سابقات ليتم شرح كيف ساعدتهم المدرسة باكتشاف انفسهم وميولهم العلمية والمهنية لتحفيز الطلاب الجدد كما يضم أيضا مختصر عن الورشات الجديدة التي تساعدهم لتنمية مهاراتهم ومواكبتهم للعصر</p>
+                    <p><strong>تصوير:</strong> اعلان خيري لمشاركة مدرسة بناة المستقبل ببناء مستقبل جديد للمتضررين من الازمة السابقة واعطائهم امل جديد بالحياة</p>
+                </div>
+                <div class="text-center mt-6 p-4 bg-[#23456e] rounded-xl font-bold text-lg md:text-xl">
+                    <p class="mb-2">التكلفة: <span class="text-yellow-400">200 $</span></p>
+                    <p class="text-green-400">خصم 25%</p>
+                    <p>المجموع: <span class="text-yellow-400">150 $</span></p>
+                </div>
+            </section>
+            
+            <!-- قسم الإنتاج الفني -->
+            <section class="bg-[#1a385f] p-6 rounded-2xl shadow-xl border border-[#23456e] transition-transform duration-300 card-hover">
+                <h2 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 border-b pb-2 border-yellow-400">الإنتاج الفني</h2>
+                <ul class="list-disc list-inside space-y-2 text-base md:text-lg">
+                    <li>تصوير من 5 الى 6 ريلات احترافية تتماشى مع اهداف الحمللة</li>
+                    <li>تغطية الاحداث إعلاميا ( الايفنتات الثلاث ) باعلى كفاءة ممكنة</li>
+                </ul>
+                <div class="text-center mt-6 p-4 bg-[#23456e] rounded-xl font-bold text-lg md:text-xl">
+                    <p class="mb-2">التكلفة: <span class="text-yellow-400">400 $</span></p>
+                    <p class="text-green-400">خصم 25%</p>
+                    <p>المجموع: <span class="text-yellow-400">300 $</span></p>
+                </div>
+            </section>
+            
+            <!-- قسم تواصل معنا -->
+            <section class="bg-[#1a385f] p-6 rounded-2xl shadow-xl border border-[#23456e] transition-transform duration-300 card-hover">
+                <h2 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 border-b pb-2 border-yellow-400">تواصل معنا</h2>
+                <div class="space-y-4 text-base md:text-lg">
+                    <p><strong class="text-yellow-400">المدير العام:</strong> عمر شربجي</p>
+                    <p><strong class="text-yellow-400">أرقام الهاتف:</strong> +963 935031226<br>+962 782797783</p>
+                    <p><strong class="text-yellow-400">الموقع:</strong></p>
+                    <ul class="list-disc list-inside ml-4 space-y-1">
+                        <li>سوريا - دمشق - المزة شيخ سعد</li>
+                        <li>الأردن - عمان - الجبيهة</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- قسم المجموع الكلي -->
+            <section class="text-center p-6 bg-[#1a385f] rounded-2xl shadow-xl border border-[#23456e] transition-transform duration-300 card-hover">
+                <h2 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-4 border-b pb-2 border-yellow-400">المجموع الكلي</h2>
+                
+                <div class="mt-8 text-center text-3xl md:text-4xl font-extrabold p-5 bg-[#23456e] rounded-xl shadow-lg">
+                    <p class="text-white">المجموع الكلي النهائي:</p>
+                    <p class="text-yellow-400 mt-2">600 $</p>
+                </div>
+            </section>
+        </main>
+        
+        <!-- تذييل العرض -->
+        <footer class="text-center p-6 bg-[#1a385f] text-gray-400 text-sm">
+            <p>&copy; 2025 شركتك للتسويق. جميع الحقوق محفوظة.</p>
+        </footer>
+
+        <!-- زر الطباعة -->
+        <div class="no-print text-center py-6 bg-[#132d4b]">
+            <button onclick="window.print()" class="bg-yellow-400 text-[#132d4b] font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-300 transition-colors">
+                طباعة / حفظ كـ PDF
+            </button>
+        </div>
+
+    </div>
+
+</body>
+</html>
